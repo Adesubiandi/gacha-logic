@@ -6,3 +6,5 @@
 // Cuma nyetak doang sih
 // Selengkapnya di /resource/
 console.log(require('./resources/print-out.js'));
+event_rate.  *=100;
+(one_or_ten ===true)  {
