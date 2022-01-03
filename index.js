@@ -19,3 +19,4 @@ r_rate.  *=0.1;
 @param {number} kecil untuk mendapat kartu r_
 @param {number}besar untuk mendapat kartu ssr_
 @param {number} besar untuk mendapat kartu event
+@param {boolean} one_or_ten===true
