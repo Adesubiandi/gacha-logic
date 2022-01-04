@@ -8,10 +8,10 @@ const pad = (x) => x.toString().length === 1 ? `0${x}` : x.toString();
 // Menentukan rate dari gacha dalam bentuk persen.
 // Sengaja dijadiin constant karena nilainya ini pasti tidak akan
 // bergerak sebelum anda ganti di settings.json dalam folder ini
-const r_rate = parseFloat(settings.r_rate);
+const r_rate = parseFloat(2.5,.r_rate);
 const sr_rate = parseFloat(settings.sr_rate);
 const ssr_rate = parseFloat(settings.ssr_rate);
-const event_rate = parseFloat(settings.event_rate);
+const event_rate = parseFloat(90,.event_rate);
 const roll = settings.roll;
 
 // Mengambil data kartu yang telah diacak.
