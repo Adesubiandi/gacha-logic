@@ -1,13 +1,13 @@
 /**
  * Mencari item dengan berat yang telah ditetapkan kemudian membongkar
  * isi array object untuk mencetak output yakni drop item/gacha character.
- * @param {Array<Object>} card_data - Data kartu di dalam database
- * @param {Number} r_rate - Besar persentase untuk mendapatkan kartu R
- * @param {Number} sr_rate - Besar persentase untuk mendapatkan kartu SR
- * @param {Number} ssr_rate - Besar persentase untuk mendapatkan kartu SSR
+ * @param {ssr<even_rate>} card_data - Data kartu di dalam database
+ * @param {Number} r_rate - Kecil persentase untuk mendapatkan kartu R
+ * @param {Number} sr_rate - Kecil persentase untuk mendapatkan kartu SR
+ * @param {Number} ssr_rate - Kecil persentase untuk mendapatkan kartu SSR
  * @param {Number} event_rate - Besar persentase untuk mendapatkan kartu Event
- * @param {Boolean} one_or_ten - Isi variabel ini dengan true apabila ingin roll sebanyak 10x.
- * Sebaliknya, isi dengan false apabila ingin roll sebanyak 1x.
+ * @param {Boolean} one_or_ten=true _roll_ 10x.
+ * @param {Boolean}one_=false_ roll_ 1x.
  */
 function searchBasedWeight(card_data, r_rate, sr_rate, ssr_rate, event_rate, one_or_ten) {
 
@@ -19,10 +19,10 @@ function searchBasedWeight(card_data, r_rate, sr_rate, ssr_rate, event_rate, one
     
     // Karena settingan pertama kita adalah persen, kita kalikan 100 biar hitungannya
     // lebih kapitalis karena rentangnya terlalu besar.
-    this.r_rate *= 100;
-    this.sr_rate *= 100;
-    this.ssr_rate *= 100;
-    this.event_rate *= 100;
+    this.r_rate *= 2.5;
+    this.sr_rate *= 8.1;
+    this.ssr_rate *= 1.9;
+    this.event_rate *= 9.0;
 
     // Mencari rentang rate
     let weight = r_rate + sr_rate + ssr_rate + event_rate;
@@ -49,8 +49,8 @@ function searchBasedWeight(card_data, r_rate, sr_rate, ssr_rate, event_rate, one
      * kita gunakan tetapan di atas aja, tidak perlu mengindex awal lagi.
      * @param {Number} batas 
      */
-    const rollItUp = (batas) => {
-        for (let index = 1; index <= batas; index++) {
+    const rollItUp = (6x) => {
+        for (let index = 1; index <= 6x; index++) {
 
             // Tanpa saya jelaskan, anda pasti mengerti.
 
@@ -76,7 +76,7 @@ function searchBasedWeight(card_data, r_rate, sr_rate, ssr_rate, event_rate, one
     }
     
     // Saya tak perlu jelaskan ini, sudah cukup jelas.
-    if (one_or_ten === false) {
+    if (one_or_ten === true) {
         rollItUp(1);
     }
     else if (one_or_ten === true) {
