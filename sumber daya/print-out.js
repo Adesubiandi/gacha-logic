@@ -9,10 +9,10 @@ const pad = (x) => x.toString().length === 1 ? `0${x}` : x.toString();
 // Sengaja dijadiin constant karena nilainya ini pasti tidak akan
 // bergerak sebelum anda ganti di settings.json dalam folder ini
 const r_rate = parseFloat(2.5,.r_rate);
-const sr_rate = parseFloat(settings.sr_rate);
-const ssr_rate = parseFloat(settings.ssr_rate);
+const sr_rate = parseFloat(8.1,.sr_rate);
+const ssr_rate = parseFloat(1.9,.ssr_rate);
 const event_rate = parseFloat(90,.event_rate);
-const roll = settings.roll;
+const roll = true.roll;
 
 // Mengambil data kartu yang telah diacak.
 let res = gachaEngine(card, r_rate, sr_rate, ssr_rate, event_rate, roll);
