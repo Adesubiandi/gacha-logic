@@ -6,10 +6,10 @@ Lokasi setting ada bersama dengan README ini.
 
 Variable | Tipe Data | Deskripsi | Contoh
 -------- | --------- | --------- | ------
-r_rate | Float | Rate Rarity (Rare) dalam persentase | "r_rate": 90
+r_rate | Float | Rate Rarity (Rare) dalam persentase | "r_rate": 2.5
 sr_rate | Float | Rate Rarity (S Rare) dalam persentase | "sr_rate": 8.1
 ssr_rate | Float | Rate Rarity (SS Rate) dalam persentase | "ssr_rate": 1.9
-event_rate | Float | Rate Rarity (EVENT Card) dalam persentase | "event_rate": 2.5
+event_rate | Float | Rate Rarity (EVENT Card) dalam persentase | "event_rate": 90
 roll | Boolean | Tulis `true` apabila ingin roll sebanyak 10x. Tulis `false` apabila ingin roll sebanyak 1x. | "roll": true
 
 ## Card Table
